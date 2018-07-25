@@ -10,7 +10,7 @@ class LoginForm extends React.Component {
    };
   }
 
-  handleLogin(event){
+  handleLogin = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
@@ -30,19 +30,25 @@ class LoginForm extends React.Component {
         <div>
           <label>
             Username
-            <input 
-            id="test-username" 
+            <input
+            id="test-username"
             type="text"
             name="username"
             value={this.state.username}
-            onChange={this.handleLogin}  
+            onChange={this.handleLogin}
              />
           </label>
         </div>
         <div>
           <label>
             Password
-            <input id="test-password" type="password" />
+            <input 
+            id="test-password" 
+            type="password"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleLogin.bind(this)} 
+            />
           </label>
         </div>
         <div>
