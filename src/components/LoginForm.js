@@ -16,7 +16,15 @@ class LoginForm extends React.Component {
     });
   }
 
-  
+  handleSubmit(event){
+    const username = this.state.username;
+    const password = this.state.password;
+    const submit = this.props.onSubmit;
+    event.preventDefault();
+    (username && password) ? submit({username, password}) : alert('Error');
+  }
+
+
 
   render() {
     return (
