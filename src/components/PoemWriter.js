@@ -24,7 +24,7 @@ export default class PoemWriter extends React.Component {
 
   }
 
-  setPoemContent= (event) => {
+  setPoemContent = (event) => {
     const content = event.target.value;
 
     if (content) {
