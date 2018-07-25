@@ -1,7 +1,7 @@
 import React from "react";
 
 
-checkPoem(poem){
+function checkPoem(poem){
  const lines = poem.split('\n');
  const wordsPerLine = lines.map(line => line.trim().split(' ').length);
  const check = (
@@ -35,7 +35,7 @@ class PoemWriter extends React.Component {
     });
   }
 
-  
+
 
   render() {
     return (
