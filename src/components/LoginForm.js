@@ -16,7 +16,7 @@ class LoginForm extends React.Component {
     });
   }
 
-  handleSubmit(event){
+  handleSubmit = (event) => {
     const username = this.state.username;
     const password = this.state.password;
     const submit = this.props.onSubmit;
@@ -42,12 +42,12 @@ class LoginForm extends React.Component {
         <div>
           <label>
             Password
-            <input 
-            id="test-password" 
+            <input
+            id="test-password"
             type="password"
             name="password"
             value={this.state.password}
-            onChange={this.handleLogin.bind(this)} 
+            onChange={this.handleLogin.bind(this)}
             />
           </label>
         </div>
