@@ -1,5 +1,22 @@
 import React from "react";
 
+
+checkPoem(poem){
+ const lines = poem.split('\n');
+ const wordsPerLine = lines.map(line => line.trim().split(' ').length);
+ const check = (
+   lines.length === 3 &&
+   wordsPerLine[0] === 5 &&
+   wordsPerLine[1] === 3 &&
+   wordsPerLine[2] === 5
+ );
+ return check;
+}
+
+
+
+
+
 class PoemWriter extends React.Component {
   constructor() {
     super();
@@ -18,18 +35,7 @@ class PoemWriter extends React.Component {
     });
   }
 
-  checkPoem(poem){
-   const lines = poem.split('\n');
-   const wordsPerLine = lines.map(line => line.trim().split(' ').length);
-   const check = (
-     lines.length === 3 &&
-     wordsPerLine[0] === 5 &&
-     wordsPerLine[1] === 3 &&
-     wordsPerLine[2] === 5
-   );
-   return check;
- }
-
+  
 
   render() {
     return (
