@@ -10,6 +10,14 @@ class PoemWriter extends React.Component {
    };
   }
 
+  handleChange(event){
+    const content = event.target.value;
+    this.setState({
+      poem: content, 
+      hidden: this.checkPoem(poem)
+    });
+  }
+
   render() {
     return (
       <div>
