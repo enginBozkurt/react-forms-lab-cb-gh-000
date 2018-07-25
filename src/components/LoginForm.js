@@ -24,11 +24,9 @@ class LoginForm extends React.Component {
     (username && password) ? submit({username, password}) : alert('Error');
   }
 
-
-
   render() {
     return (
-      <form>
+       <form onSubmit={this.handleSubmit}>
         <div>
           <label>
             Username
