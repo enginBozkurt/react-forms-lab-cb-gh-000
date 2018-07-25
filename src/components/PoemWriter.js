@@ -20,13 +20,13 @@ export default class PoemWriter extends React.Component {
       content: '',
       isValid: false,
     };
-    
-    
+
+
   }
-  
+
   setPoemContent= (event) => {
     const content = event.target.value;
-    
+
     if (content) {
       this.setState({
         content: content,
